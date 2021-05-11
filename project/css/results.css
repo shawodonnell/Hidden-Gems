@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@587&family=Raleway:ital,wght@1,500&display=swap');
+
+.main-results{
+    padding-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+h1{
+    color: var(--colour-2);
+    text-shadow: 2px 4px 1px var(--colour-5),3px 6px 10px var(--colour-10);
+    font-size: 3rem;
+    margin-left: 30vw;
+    font-family: Dancing Script, sans-serif;
+    letter-spacing: 2px;
+}
+
+.resultsContainer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-width: 90vw;
+    min-width: 90vw;
+}
+
+.Cards{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;    
+    background: linear-gradient(to bottom right, rgba(73, 7, 38, 0.95),rgba(6, 36, 116, 0.85));    
+}
+
+.single{   
+    max-width: 90vw;
+}
+
+.multi{
+    width: 100%;
+}
+
+#posterw154{
+    border: 1px white solid;
+    max-width: 160px;    
+    height: auto;
+    object-fit: contain;
+    margin-right: 2vw;
+}
+
+#resultdetails{
+    min-height: 100%;
+}
+
+#namebtn{   
+    padding-top: 1vh; 
+    font-size: 1.8rem;  
+    color: var(--colour-2);
+    border: none;
+    text-align: center;
+    text-decoration: underline;
+    background: transparent;
+    
+}
+#namebtn:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+}
+
+.resultchild{    
+    color: var(--colour-2);
+    margin-top:1vh;
+    letter-spacing: 2px;
+}
+
+/***********************MEDIA QUERIES - MOBILE SCREEN*****************/
+
+@media screen and (max-width: 450px) {
+
+    /* sliding menu and operations */
+    #slideSideMenu{         
+        transform: translateX(-250px);
+    }
+    #slideSideMenu.open{
+        transform: translateX(0px);        
+    }
+
+    #posterw154{
+        display: none;
+    }
+
+    .resultchild{
+        text-align: center;
+    }
+
+    #movieform{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

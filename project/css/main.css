@@ -1,0 +1,310 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@587&family=Raleway:ital,wght@1,500&display=swap');
+
+
+section {
+    height: 100vh;
+    width: 100vw;
+    padding-top: 7vh;
+}
+
+/* WELCOME SECTION ********************************************/
+/* WELCOME TEXT */
+/* text positional */
+#Title, .subtitletext, #nextSection{
+    position: absolute;
+    z-index: 25;
+    text-align: center;
+    text-decoration: none;
+    transition: ease 1s ;
+}
+/* top tex */
+#Title{    
+    top: 25vh;
+    left: 30vw;
+    font-size: 6rem;   
+    color: var(--colour-2);   
+    font-family: Dancing Script, sans-serif;
+    transform: rotate(-6deg);
+    text-shadow: 2px 4px 2px var(--colour-7),4px 6px 8px var(--colour-3);
+}
+/* SUBTitle containers and text */
+.subtitletext{
+    font-size: 2rem;
+    color: var(--colour-7);
+    text-shadow: 5px 5px 5px var(--colour-8),5px 5px 5px var(--colour-4);
+}
+
+#SubtitleText1{
+    top: 10vh;
+    left: 40vw;
+    transform: rotate(-6deg);
+}
+#SubtitleText2{
+    top: 15vh;
+    left: 42vw;
+    transform: rotate(-6deg);
+}
+#SubtitleText3 {
+    top: 20vh;
+    left: 44vw;
+    transform: rotate(-6deg);
+}
+
+
+/* bottom text container and pseudo*/
+#nextSection{
+    bottom: 8vh;
+    left: 18vw;
+    font-size: 5rem;
+    color: var(--colour-2);
+    text-shadow: 2px 4px 1px var(--colour-5),3px 6px 10px var(--colour-10);
+}
+
+#nextSection h2{
+    font-family: Dancing Script, sans-serif;
+}
+
+#nextSection:hover{
+    transform: scale(1.22);   
+    text-shadow: -2px -4px 6px var(--colour-7),-2px -4px 6px var(--colour-9);
+}
+
+/* MAIN SECTION *******************************************************************************/
+.maintilescontainer{
+    min-height: 35vh;
+    max-height: 35vh;
+    width: 100%;      
+    padding: 3.5vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tilecontainer{
+       
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.maintile {
+    width: 30%;
+    height: 30vh;     
+    color: bisque;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    letter-spacing: 1px;    
+    border: 1px solid rgba(230,177,152, 0.5);
+    background-color: rgba(230,177,152, 0.3);
+}
+
+/* Trending Box - UL/LI TAGS */
+
+.trendlist { 
+    list-style-type: none;  
+}
+.trendlist li {
+    padding: 5px 0;
+    overflow-wrap: break-word;
+}
+
+/* Wild Card Box */
+.wildcard {
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#wildcardbtn {
+    font-family: Raleway, sans-serif;
+    border: 4px solid var(--colour-6);
+    box-shadow: 2px 2px 10px 2px var(--colour-1);
+    color: var(--colour-5);
+    background-color: var(--colour-2);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+    border-radius: 25px;
+    
+}
+
+#wildcardbtn:hover{
+    filter: brightness(80%);
+    transition: 0.3s;
+}
+#wildcardbtn:active{
+    transform: translateY(15px);
+}
+
+/* SEARCH SECTION */
+.mainsearchcontainer button{
+    background: transparent;
+    border: none;
+    overflow-y: hidden;
+}
+
+.searchtile {
+    display: flex;
+    justify-content: center;
+    padding: 2vh 0 2vh 0;
+    margin: 3vh 10vw 0 10vw;    
+    position: relative;    
+    background-color: rgba(20,49,130,0.2);
+    width: 80vw;
+    border-radius: 25px;    
+}
+
+.searchform{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    margin: 0;
+    background-color: rgba(20,49,130,0.8);
+    width: 70vw;
+}
+
+input[type=text]{
+    text-align: center;
+    border: 3px solid var(--colour-8);
+    padding: 0.5rem; 
+    background-color: var(--colour-2);
+    flex-grow: 1;
+    transition: 0.3s ease-in;
+}
+
+input[type=text]:hover{
+    background-color: var(--colour-5);
+}
+
+input[type=text]:active{
+    background-color: var(--colour-2);
+    color: black;    
+}
+.searchtile .fas, .searchtile .fa {
+    padding: 1vh;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+::placeholder{
+    color: black;
+    font-size: 1rem;
+    transition: 0.3s ease-in;
+}
+
+#topTen {
+    color: bisque;
+    font-size: 1rem;
+    text-decoration: underline;
+    text-shadow: 5px 5px 5px var(--colour-8),5px 5px 5px var(--colour-4);
+    margin: 0rem .5rem;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    
+}
+
+
+/***********************MEDIA QUERIES - WIDE SCREEN*******************/
+
+@media screen and (min-width: 992px) {
+    /* intro text */
+    #Title{    
+        top: 22vh;
+        left: 31vw;  
+        transform: rotate(-5.5deg);      
+    }
+    
+    .subtitletext{
+        font-size: 2.7rem;       
+    }
+    
+    #SubtitleText1{
+        top: 8vh;
+        left: 41vw;
+        
+    }
+    #SubtitleText2{
+        top: 12vh;
+        left: 46vw;
+        
+    }
+    #SubtitleText3 {
+        top: 15vh;
+        left: 53vw;
+        
+    }
+    /* bottom text container and pseudo*/
+    #nextSection{
+        bottom: 8vh;
+        left: 31vw;
+        font-size: 5rem;        
+    }
+
+    /* MAIN section - Tiles */
+
+    .maintile {
+        max-width: 25vw;       
+    }
+
+    .searchtile {
+       max-width: 70vw;       
+    }
+
+    .searchform{
+        max-width: 60vw;
+    }
+
+  }
+
+/***********************MEDIA QUERIES - MOBILE SCREEN*****************/
+
+  @media screen and (max-width: 450px) {
+    /* intro text */
+    #Title, .subtitletext {    
+        display: none;    
+    }
+        
+    /* bottom text container and pseudo*/
+    #nextSection{
+        bottom: 10vh;
+        left: 7vw;
+        font-size: 3rem;        
+    }
+
+    /* sliding menu and operations */
+    #slideSideMenu{         
+        transform: translateX(-250px);
+    }
+    #slideSideMenu.open{
+        transform: translateX(0px);        
+    }
+
+    /* MAIN section - Tiles */
+
+    .maintile {
+        display: none;   
+    }
+    
+    .searchform{
+        min-width: 100vw;
+    }
+
+    #titletext,#reftext{
+        flex-grow: 0;        
+    }
+
+    #reset{
+        display: none;
+    }
+
+  } 
+  

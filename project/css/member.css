@@ -1,0 +1,93 @@
+
+.membercontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-top: 7vh;
+}
+
+#name, #birthday{
+    font-family: Dancing Script, sans-serif;
+    font-weight: 587;
+    color: var(--colour-2);
+    font-size: 3rem;
+    padding: 0 0 2vh 4vw;
+}
+
+#logo{
+    color: yellow;
+    background-color: black;
+    font-size: 3rem;
+    margin-left: 4vw;
+}
+
+
+/* Other Movies Section */
+.moviecontainer h2{
+    text-align: center;
+    background-color: var(--colour-4);
+    color: var(--colour-2);
+    opacity: 0.9;
+}
+
+.moviecontainer{    
+    justify-content: center;
+    align-items: center;
+    margin: 3vh 4vw;
+}
+
+
+.movies{    
+    display: flex;
+    flex-direction: row;  
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow: auto;    
+}
+
+.movie{
+    padding: 0 1.5vw;
+}
+
+.movie:hover{
+    filter: brightness(0.85);
+    text-shadow: 0 0 1vw var(--colour-2);
+}
+
+
+/***********************MEDIA QUERIES - MOBILE SCREEN*****************/
+
+@media screen and (max-width: 450px) {
+
+    /* sliding menu and operations */
+    #slideSideMenu{         
+        transform: translateX(-250px);
+    }
+    #slideSideMenu.open{
+        transform: translateX(0px);        
+    }
+
+    #name{
+        font-size: 2rem;
+    }
+
+    #birthday{
+        font-size: 1rem;
+    }
+
+    .movies{    
+        
+        flex-direction: column;  
+        justify-content: center;
+        align-items: center;
+        overflow: scroll;    
+    }
+
+    .movie{
+        margin: 1vh 0;
+    }
+    
+    
+}
